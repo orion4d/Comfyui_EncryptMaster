@@ -173,27 +173,14 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 
     [Text Box] -> [Text Cipher (encrypt)] -> [Stego Embed Text] -> [Save Image (PNG)]
 
-### B) Partage réseaux sociaux (résistant à la recompression)
-
-    [Text Box] -> [Jpeg Stego Embed Text (quality ~90)] -> [Save Image (JPEG)]
-
-### C) Cacher une image dans une autre
+### B) Cacher une image dans une autre
 
     [Load Cover] + [Load Secret] -> [Stego Embed Image (secret_encode=jpeg, bpc=2)] -> [Save Image (PNG)]
 
-### D) Chiffrer une image en « bruit » (réversible)
+### C) Chiffrer une image en « bruit » (réversible)
 
     [Load Image] -> [Image Cipher → Noise] -> [Save Image (PNG)]
     [Load Noise] -> [Image Decipher ← Noise] -> [Preview]
-
----
-
-## 📏 Rappels de capacité (LSB)
-
-- Formule : `capacité_octets ≈ largeur × hauteur × 3 × bpc / 8`  
-- Overhead crypto ≈ 40–60 octets (entêtes + tag GCM)  
-- Plus `bpc` est élevé, plus la capacité augmente… et le risque de détection statistique aussi.
-
 ---
 
 ## ✅ Bonnes pratiques
