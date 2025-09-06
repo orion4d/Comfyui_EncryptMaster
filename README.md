@@ -1,6 +1,8 @@
 # 🔐 ComfyUI EncryptMaster
 <img width="1179" height="1199" alt="image" src="https://github.com/user-attachments/assets/22ee167a-70f0-4e8f-ba3a-0ea84db16bb9" />
+
 Pack **ComfyUI** de nœuds pour **chiffrer** et **cacher** du texte ou des images.  
+
 Sécurité : **AES-256-GCM** (authentifié) avec dérivation de clé **scrypt**.  
 Stéganographie : **LSB** (PNG/TIFF) et **DCT/JPEG** (plus robuste aux recompressions).
 
