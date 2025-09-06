@@ -47,6 +47,11 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 ---
 
 ## 🧩 Nœuds et usages
+<img width="1192" height="1070" alt="image" src="https://github.com/user-attachments/assets/1f7f6853-1889-43bf-be98-0bbed14ca8e1" />
+<img width="1376" height="1090" alt="image" src="https://github.com/user-attachments/assets/2918824f-6b16-4985-a9dd-7abd59f3ad0d" />
+<img width="1079" height="808" alt="image" src="https://github.com/user-attachments/assets/c906c726-3b58-4205-aa21-9598bd59c49a" />
+<img width="1928" height="1190" alt="image" src="https://github.com/user-attachments/assets/279a5fd7-641e-4e00-b637-2d60f5e1c3f2" />
+<img width="1574" height="1030" alt="image" src="https://github.com/user-attachments/assets/023788a7-6d6d-4b64-b42a-c9677eea5647" />
 
 ### 1) EncryptMaster — Text Cipher (AES-GCM)
 
@@ -105,7 +110,6 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 
 ### 4) EncryptMaster — Image Cipher → Noise (AES-GCM)  
 ###    EncryptMaster — Image Decipher ← Noise (AES-GCM)
-
 - **But** : chiffrer **tous les pixels** d’une image et produire une image de **bruit aléatoire** (réversible).
 
 - **Entrées (Cipher)**
