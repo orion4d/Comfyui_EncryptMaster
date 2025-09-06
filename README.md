@@ -14,10 +14,8 @@ Dossier : `ComfyUI/custom_nodes/Comfyui_EncryptMaster/`
 - `stego_text.py` — Stego Text (cacher/extraire du texte dans une image, LSB)
 - `stego_capacity.py` — Stego Capacity Estimator (capacité d’une image en LSB)
 - `image_cipher.py` — Image ⇄ Noise (image chiffrée rendue comme “bruit”)
-- `jpeg_stego.py` — JPEG Stego (texte en DCT, robuste aux recompressions)
 - `stego_image_in_image.py` — Stego Image-in-Image (cacher une image dans une autre, compression avant chiffrement)
 - `generate_passphrase.py` — Generate Passphrase (phrases de passe solides)
-- `__init__.py` — enregistrement des nœuds
 
 ---
 
@@ -131,31 +129,7 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 
 ---
 
-### 5) EncryptMaster — Jpeg Stego Embed Text (DCT/AES-GCM) / Extract
-
-- **But** : cacher un texte dans les **coefficients DCT** (canal Y) d’un JPEG — plus robuste aux recompressions (FB/IG).
-
-- **Entrées (Embed)**
-  - `image` (IMAGE), `text` (STRING)
-  - `passphrase` (STRING), `quality` (INT 10–95)
-  - `associated_data` (STRING, optionnel)
-
-- **Sorties (Embed)**
-  - `image` (IMAGE) : JPEG réencodé à la qualité choisie.
-
-- **Entrées (Extract)**
-  - `image` (IMAGE), `passphrase` (STRING), `associated_data` (STRING, optionnel)
-
-- **Sorties (Extract)**
-  - `text` (STRING)
-
-- **Limites**
-  - Capacité : **quelques kilo-octets**.  
-  - Très fortes dégradations (Q ≤ 60), resize massif ou filtres agressifs peuvent détruire le message.
-
----
-
-### 6) EncryptMaster — Stego Embed Image (LSB/AES-GCM) / Stego Extract Image
+### 5) EncryptMaster — Stego Embed Image (LSB/AES-GCM) / Stego Extract Image
 
 - **But** : cacher une **image secrète** B dans une **image porteuse** A (LSB), en **compressant** le secret **avant chiffrement**.
 
@@ -186,7 +160,7 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 
 ---
 
-### 7) EncryptMaster — Generate Passphrase
+### 6) EncryptMaster — Generate Passphrase
 
 - **But** : générer une phrase de passe robuste (type Diceware).
 - **Astuce** : viser ≥ 24 caractères ou 8–9 mots aléatoires.
