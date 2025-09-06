@@ -200,21 +200,7 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
 
 - Utiliser **Generate Passphrase** pour des passphrases solides.  
 - Renseigner un **`associated_data`** stable (ex. `project=EncryptMaster;v=1`) et le réutiliser à l’extraction.  
-- Éviter les filtres/redimensionnements après stéganographie LSB.  
-- Pour diffusion sur réseaux sociaux, préférer le **mode JPEG/DCT**.
-
----
-
-## 🐞 Dépannage
-
-- **Capacity too small**  
-  Augmenter `bits_per_channel`, choisir `secret_encode="jpeg"` (q 80–85), réduire le secret, ou utiliser une cover plus grande.
-
-- **Decrypt failed / wrong tag**  
-  Passphrase ou `associated_data` incorrects, ou image altérée (recompression/resize pour LSB).
-
-- **Image « bruit » illisible**  
-  Sauvegarde en JPEG → réessayer en PNG/TIFF.
+- Ne pas compresser les images codées, format export png ou tiff, ne pas réenregister les images en jpeg, beaucoup de réseaux sociaux réencodent les images (cryptage infonctionnel).
 
 ---
 <div align="center">
