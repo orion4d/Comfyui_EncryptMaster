@@ -217,12 +217,6 @@ Testé avec Python 3.10–3.12, ComfyUI ≥ 0.3.x, Windows / Linux.
   Sauvegarde en JPEG → réessayer en PNG/TIFF.
 
 ---
-
-## 📜 Licence
-
-Ce projet est sous licence **MIT**.
-
----
 <div align="center">
 
 <h3>🌟 <strong>Show Your Support</strong></h3>
